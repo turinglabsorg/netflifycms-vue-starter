@@ -12,7 +12,7 @@ function importAll (r, folder) {
             let cut = content.indexOf(':')
             let property = content.substr(0,cut)
             let value = content.replace(property + ': ','')
-            if(content[1] !== ''){
+            if(property !== '' && value !== ''){
                 files[folder][slug][property] = value
             }
         }
