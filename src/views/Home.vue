@@ -1,18 +1,28 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <img alt="Vue logo" src="../assets/logo.png"><br>
+    <h3>This is a small Vue + NetlifyCMS starter</h3>
+    You can find all the contents inside "src/contents" and import them by importing get.js file:<br>
+    <pre style="text-align:left; display:inline-block; padding:20px; width:500px; border:1px solid #eee; border-radius:5px;">{{ translations }}</pre>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+  import * as contents from '@/contents/get'
+  export default {
+    name: 'Home',
+    components: {
 
-export default {
-  name: 'Home',
-  components: {
-    HelloWorld
+    },
+    data() {
+      return {
+        translations: contents.translations
+      }
+    }
   }
-}
 </script>
+<style>
+  .home{
+    margin-top:20vh;
+  }
+</style>
