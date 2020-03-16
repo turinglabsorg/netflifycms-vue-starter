@@ -8,4 +8,7 @@ This is true Headless CMS.
 
 I've built a simple git watcher that builds a new fresh version of the website if some new data is posted on github, to run it just start a pm2 instance and run `pm2 start git.js`. The website should point to the "dist" folder. Maybe you have to setup your apache or nginx instance to point that build folder.
 
+I've included this repo inside `git-auth` folder: https://github.com/vencax/netlify-cms-github-oauth-provider.
+Thank you @vencax!
+
 Ask for support if you need.
